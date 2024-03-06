@@ -24,7 +24,7 @@ classdef ToolboxIntegTest < matlab.unittest.TestCase
         end
 
         function smokeConvec(~)
-            convec(3+i,4-i);
+            convec(3+1i,4-1i);
         end
 
         function smokeYprime(testCase)

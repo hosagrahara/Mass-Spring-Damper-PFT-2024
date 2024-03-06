@@ -10,7 +10,7 @@ function testSettlingTime(testCase)
 positionAfterSettling = position(time > 2);
 
 
-verifyEqual(testCase, positionAfterSettling, repmat(0,size(positionAfterSettling)), 'AbsTol', .001);
+verifyEqual(testCase, positionAfterSettling, zeros(size(positionAfterSettling)), 'AbsTol', .001);
 end
 
 function testOvershoot(testCase)
@@ -29,7 +29,7 @@ testCase.verifyError(@() simulateSystem('bunk'), ...
    'simulateSystem:InvalidDesign:ShouldBeStruct');
 end
 
-function testDampingTypes(testCase)
+function testDampingTypes(~)
 [~, ~] = simulateSystem(springMassDamperDesign("underdamped"));
 [~, ~] = simulateSystem(springMassDamperDesign("overdamped"));
 [~, ~] = simulateSystem(springMassDamperDesign("nicelydamped"));
