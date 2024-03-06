@@ -99,7 +99,7 @@ jobs:
           path: release/Mass-Spring-Damper.mltbx
 
 
-  # deploy-service:
+  deploy-service:
     # This job executes only after a successful completion of 'mex-and-unittests' job
     needs: mex-and-unittests
 
